@@ -2,3 +2,4 @@
 .editorconfig
 .travis.yml
 .gitattributes
+test.js

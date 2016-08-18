@@ -1,6 +1,6 @@
 {
   "name": "is-url-relative-without-domain",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Check if URL is relative without domain",
   "main": "index.js",
   "scripts": {

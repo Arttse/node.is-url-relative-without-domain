@@ -18,7 +18,10 @@ var isUrlRelativeWithoutDomain = require('is-url-relative-without-domain');
 isUrlRelativeWithoutDomain('/show/must?go=on');
 //=> true
 
-isUrlRelativeWithoutDomain('https://site.com');
+isUrlRelativeWithoutDomain('index.php');
+//=> true
+
+isUrlRelativeWithoutDomain('https://site.com/index.php');
 //=> false
 
 isUrlRelativeWithoutDomain('site.com/show/must?go=on');

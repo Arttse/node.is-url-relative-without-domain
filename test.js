@@ -38,6 +38,42 @@ test ( 'check with «.»', t => {
 
 } );
 
+test ( 'check with extensions', t => {
+
+  t.true ( m ( 'index.php' ) );
+  t.true ( m ( 'index.asp' ) );
+  t.true ( m ( 'index.aspx' ) );
+  t.true ( m ( 'about.html' ) );
+
+  t.true ( m ( '/index.php' ) );
+  t.true ( m ( '/index.asp' ) );
+  t.true ( m ( '/index.aspx' ) );
+  t.true ( m ( '/about.html' ) );
+
+  t.true ( m ( 'in/side/index.php' ) );
+  t.true ( m ( 'in/side/index.asp' ) );
+  t.true ( m ( 'in/side/index.aspx' ) );
+  t.true ( m ( 'in/side/about.html' ) );
+
+  t.true ( m ( '/in/side/index.php' ) );
+  t.true ( m ( '/in/side/index.asp' ) );
+  t.true ( m ( '/in/side/index.aspx' ) );
+  t.true ( m ( '/in/side/about.html' ) );
+
+  t.true ( m ( 'index.php/in/side' ) );
+  t.true ( m ( 'index.asp/in/side' ) );
+  t.true ( m ( 'index.aspx/in/side' ) );
+
+  t.true ( m ( '/index.php/in/side' ) );
+  t.true ( m ( '/index.asp/in/side' ) );
+  t.true ( m ( '/index.aspx/in/side' ) );
+
+  t.false ( m ( 'http://site.com/index.php/in/side' ) );
+  t.false ( m ( 'http://site.com/index.asp/in/side' ) );
+  t.false ( m ( 'http://site.com/index.aspx/in/side' ) );
+
+} );
+
 test ( 'check starts at «/»', t => {
 
   t.true ( m ( '/in' ) );
@@ -63,6 +99,7 @@ test ( 'check start at «/» and with «.»', t => {
 
 test ( 'check other starts', t => {
 
+  t.true ( m ( '' ) );
   t.true ( m ( 'site' ) );
   t.true ( m ( 'site/in' ) );
   t.true ( m ( 'site/in#hash' ) );

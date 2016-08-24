@@ -25,6 +25,6 @@ module.exports = function ( str ) {
   }
 
   /** Check domain */
-  return !/^(?:\/|)(?:\w+(?:\.|:))/.test ( str );
+  return !/^(?:\/|)(?:\w+(?:\.(?!php|asp|aspx|html)|:))/i.test ( str );
 
 };

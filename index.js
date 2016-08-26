@@ -1,5 +1,8 @@
 'use strict';
 
+var url     = require ( 'url' );
+var domains = require ( 'domains' );
+
 /**
  * Check if URL is relative without domain
  *
@@ -14,17 +17,59 @@ module.exports = function ( str ) {
 
   }
 
-  /** Trim */
-  str = str.trim ();
+  /** Check empty string */
+  if ( str === '' ) {
 
-  /** Check // */
-  if ( str.indexOf ( '//' ) === 0 ) {
+    return true;
+
+  }
+
+  var m;
+  var domain;
+
+  /** URL Object */
+  var urlObj = url.parse ( str.trim () );
+
+  /** Check protocol and hostname */
+  if ( urlObj.protocol || urlObj.hostname ) {
 
     return false;
 
   }
 
+  /** Check pathname */
+  if ( !urlObj.pathname ) {
+
+    return Boolean ( urlObj.search || urlObj.hash );
+
+  }
+
+  /** Check // */
+  if ( urlObj.pathname.indexOf ( '//' ) === 0 ) {
+
+    return false;
+
+  }
+
+  /** Remove slash in start */
+  if ( urlObj.pathname.indexOf ( '/' ) === 0 ) {
+
+    urlObj.pathname = urlObj.pathname.slice ( 1 );
+
+  }
+
+  /** Get domain from pathname */
+  if ( ( m = urlObj.pathname.match ( /(.*?)\// ) ) ) {
+
+    domain = m[1];
+
+  } else {
+
+    domain = urlObj.pathname;
+
+  }
+
   /** Check domain */
-  return !/^(?:\/|)(?:\w+(?:\.(?!php|asp|aspx|html)|:))/i.test ( str );
+  return !( new RegExp ( '\\.(?:' + domains.join ( '|' ) + ')$', 'i' ).test ( domain ) );
 
 };

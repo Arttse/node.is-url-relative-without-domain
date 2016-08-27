@@ -32,7 +32,8 @@
     "xo": "*"
   },
   "dependencies": {
-    "domains": "1"
+    "domains": "1",
+    "punycode": "1"
   },
   "xo": {
     "esnext": false,

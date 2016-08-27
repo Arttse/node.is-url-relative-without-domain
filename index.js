@@ -1,7 +1,8 @@
 'use strict';
 
-var url     = require ( 'url' );
-var domains = require ( 'domains' );
+var url      = require ( 'url' );
+var punycode = require ( 'punycode' );
+var domains  = require ( 'domains' );
 
 /**
  * Check if URL is relative without domain
@@ -70,7 +71,10 @@ module.exports = function ( str ) {
   }
 
   /** Remove port */
-  domain = domain.replace( /:(?:.*)$/, '' );
+  domain = domain.replace ( /:(?:.*)$/, '' );
+
+  /** Domain to Unicode */
+  domain = punycode.toUnicode ( domain );
 
   /** Check domain */
   return !( new RegExp ( '\\.(?:' + domains.join ( '|' ) + ')$', 'i' ).test ( domain ) );

@@ -69,6 +69,9 @@ module.exports = function ( str ) {
 
   }
 
+  /** Remove port */
+  domain = domain.replace( /:(?:.*)$/, '' );
+
   /** Check domain */
   return !( new RegExp ( '\\.(?:' + domains.join ( '|' ) + ')$', 'i' ).test ( domain ) );
 

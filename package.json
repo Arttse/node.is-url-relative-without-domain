@@ -1,7 +1,7 @@
 {
   "name": "is-url-relative-without-domain",
-  "version": "1.1.0-dev",
-  "description": "Check if URL is relative without domain",
+  "version": "1.1.0",
+  "description": "Check if an URL is relative without domain",
   "main": "index.js",
   "scripts": {
     "test": "xo && ava"
@@ -11,15 +11,15 @@
     "url": "git+https://github.com/Arttse/node.is-url-relative-without-domain.git"
   },
   "keywords": [
-    "is",
     "url",
-    "uri",
     "relative",
+    "absolute",
+    "uri",
+    "is",
+    "check",
     "without",
     "domain",
-    "name",
-    "check",
-    "checks"
+    "name"
   ],
   "author": "Nikita «Arttse» Bystrov",
   "license": "MIT",
@@ -27,13 +27,13 @@
     "url": "https://github.com/Arttse/node.is-url-relative-without-domain/issues"
   },
   "homepage": "https://github.com/Arttse/node.is-url-relative-without-domain#readme",
-  "devDependencies": {
-    "ava": "*",
-    "xo": "*"
-  },
   "dependencies": {
     "domains": "1",
     "punycode": "1"
+  },
+  "devDependencies": {
+    "ava": "*",
+    "xo": "*"
   },
   "xo": {
     "esnext": false,
@@ -75,6 +75,9 @@
           "afterColon": true,
           "align": "colon"
         }
+      ],
+      "no-extra-parens": [
+        "warn"
       ]
     }
   }

@@ -1,5 +1,2 @@
-/.*/
-.editorconfig
-.travis.yml
-.gitattributes
-/test
+# All unnecessary
+*

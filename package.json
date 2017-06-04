@@ -4,7 +4,7 @@
   "description": "Check if an URL is relative without domain",
   "main": "index.js",
   "scripts": {
-    "test": "xo && nyc -cs ava",
+    "test": "xo && nyc -cs ava -c 5",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "engines": {

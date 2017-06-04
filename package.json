@@ -32,8 +32,8 @@
     "punycode": "1"
   },
   "devDependencies": {
-    "ava": "*",
-    "xo": "*"
+    "ava": "^0.16.0",
+    "xo": "^0.16.0"
   },
   "xo": {
     "esnext": false,
@@ -42,8 +42,6 @@
         "error",
         {
           "exceptions": {
-            "ImportDeclaration": true,
-            "VariableDeclarator": true,
             "Property": true
           }
         }
@@ -60,10 +58,7 @@
           "maxEOF": 1
         }
       ],
-      "padded-blocks": [
-        "error",
-        "always"
-      ],
+      "padded-blocks": 0,
       "indent": [
         "error",
         2
@@ -76,9 +71,7 @@
           "align": "colon"
         }
       ],
-      "no-extra-parens": [
-        "warn"
-      ]
+      "no-extra-parens": 0
     }
   }
 }

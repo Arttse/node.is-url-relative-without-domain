@@ -1,8 +1,8 @@
 'use strict';
 
-var url      = require ( 'url' );
+var url = require ( 'url' );
 var punycode = require ( 'punycode' );
-var domains  = require ( 'domains' );
+var domains = require ( 'domains' );
 
 /**
  * Check if an URL is relative without domain
@@ -11,18 +11,13 @@ var domains  = require ( 'domains' );
  * @returns {Boolean}
  */
 module.exports = function ( str ) {
-
   if ( typeof str !== 'string' ) {
-
     throw new TypeError ( 'Expected a string, not ' + typeof str );
-
   }
 
   /** Check empty string */
   if ( str === '' ) {
-
     return true;
-
   }
 
   var m;
@@ -33,41 +28,29 @@ module.exports = function ( str ) {
 
   /** Check protocol and hostname */
   if ( urlObj.protocol || urlObj.hostname ) {
-
     return false;
-
   }
 
   /** Check pathname */
   if ( !urlObj.pathname ) {
-
     return Boolean ( urlObj.search || urlObj.hash );
-
   }
 
   /** Check // */
   if ( urlObj.pathname.indexOf ( '//' ) === 0 ) {
-
     return false;
-
   }
 
   /** Remove slash in start */
   if ( urlObj.pathname.indexOf ( '/' ) === 0 ) {
-
     urlObj.pathname = urlObj.pathname.slice ( 1 );
-
   }
 
   /** Get domain from pathname */
   if ( ( m = urlObj.pathname.match ( /(.*?)\// ) ) ) {
-
     domain = m[1];
-
   } else {
-
     domain = urlObj.pathname;
-
   }
 
   /** Remove port */
@@ -78,5 +61,4 @@ module.exports = function ( str ) {
 
   /** Check domain */
   return !( new RegExp ( '\\.(?:' + domains.join ( '|' ) + ')$', 'i' ).test ( domain ) );
-
 };

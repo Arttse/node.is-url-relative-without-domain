@@ -4,7 +4,8 @@
   "description": "Check if an URL is relative without domain",
   "main": "index.js",
   "scripts": {
-    "test": "xo && nyc ava"
+    "test": "xo && nyc ava",
+    "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "engines": {
     "node": ">=0.10"
@@ -36,6 +37,7 @@
   },
   "devDependencies": {
     "ava": "^0.16.0",
+    "coveralls": "^2.13.1",
     "nyc": "^9.0.1",
     "xo": "^0.16.0"
   },

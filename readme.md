@@ -1,4 +1,6 @@
-# is-url-relative-without-domain [![npm version](https://badge.fury.io/js/is-url-relative-without-domain.svg)](https://www.npmjs.com/package/is-url-relative-without-domain) [![Build Status](https://travis-ci.org/Arttse/node.is-url-relative-without-domain.svg?branch=master)](https://travis-ci.org/Arttse/node.is-url-relative-without-domain)
+# is-url-relative-without-domain
+[![Build Status](https://travis-ci.org/Arttse/node.is-url-relative-without-domain.svg?branch=master)](https://travis-ci.org/Arttse/node.is-url-relative-without-domain)
+[![Coverage Status](https://coveralls.io/repos/github/Arttse/node.is-url-relative-without-domain/badge.svg?branch=master)](https://coveralls.io/github/Arttse/node.is-url-relative-without-domain?branch=master)
 
 > Node.js module. Check if an URL is relative without domain
 

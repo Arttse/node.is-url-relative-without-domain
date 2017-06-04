@@ -4,7 +4,7 @@
   "description": "Check if an URL is relative without domain",
   "main": "index.js",
   "scripts": {
-    "test": "xo && ava"
+    "test": "xo && nyc ava"
   },
   "engines": {
     "node": ">=0.10"
@@ -36,6 +36,7 @@
   },
   "devDependencies": {
     "ava": "^0.16.0",
+    "nyc": "^9.0.1",
     "xo": "^0.16.0"
   },
   "xo": {

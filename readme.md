@@ -3,7 +3,7 @@
 [![Coverage Status](https://coveralls.io/repos/github/Arttse/node.is-url-relative-without-domain/badge.svg?branch=master)](https://coveralls.io/github/Arttse/node.is-url-relative-without-domain?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/arttse/node.is-url-relative-without-domain/badge.svg)](https://snyk.io/test/github/arttse/node.is-url-relative-without-domain)
 
-> Node.js module. Check if an URL is relative without domain
+> Node.js module. Checks if an URL is relative without domain
 
 
 ## Install

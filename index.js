@@ -5,9 +5,9 @@ var punycode = require ( 'punycode' );
 var domains = require ( 'domains' );
 
 /**
- * Check if an URL is relative without domain
+ * Checks if an URL is relative without domain
  *
- * @param {String} str - URL to check
+ * @param {String} str - URL for check
  * @returns {Boolean}
  */
 module.exports = function ( str ) {

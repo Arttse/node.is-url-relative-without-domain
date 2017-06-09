@@ -1,7 +1,7 @@
 {
   "name": "is-url-relative-without-domain",
   "version": "1.1.0",
-  "description": "Check if an URL is relative without domain",
+  "description": "Checks if an URL is relative without domain",
   "main": "index.js",
   "scripts": {
     "test": "xo && nyc -cs ava -c 5",

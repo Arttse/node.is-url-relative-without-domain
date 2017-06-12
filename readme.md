@@ -9,7 +9,11 @@
 ## Install
 
 ```
-$ npm install -S is-url-relative-without-domain
+$ npm install is-url-relative-without-domain --save
+```
+or
+```
+$ yarn add is-url-relative-without-domain
 ```
 
 

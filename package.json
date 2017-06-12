@@ -32,7 +32,7 @@
   },
   "homepage": "https://github.com/Arttse/node.is-url-relative-without-domain#readme",
   "dependencies": {
-    "domains": "1",
+    "domains": "^1.1.1",
     "punycode": "1"
   },
   "devDependencies": {

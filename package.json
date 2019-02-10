@@ -47,44 +47,5 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "nyc": "^13.2.0"
-  },
-  "xo": {
-    "esnext": false,
-    "rules": {
-      "no-multi-spaces": [
-        "error",
-        {
-          "exceptions": {
-            "Property": true
-          }
-        }
-      ],
-      "no-spaced-func": 0,
-      "space-in-parens": [
-        "error",
-        "always"
-      ],
-      "no-multiple-empty-lines": [
-        "error",
-        {
-          "max": 2,
-          "maxEOF": 1
-        }
-      ],
-      "padded-blocks": 0,
-      "indent": [
-        "error",
-        2
-      ],
-      "key-spacing": [
-        "error",
-        {
-          "beforeColon": true,
-          "afterColon": true,
-          "align": "colon"
-        }
-      ],
-      "no-extra-parens": 0
-    }
   }
 }

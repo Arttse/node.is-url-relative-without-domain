@@ -1,0 +1,17 @@
+root: true
+
+extends:
+  - "standard"
+
+parserOptions:
+  ecmaVersion: 9
+  sourceType: "module"
+
+env:
+  node: true
+  es6: true
+
+rules:
+  comma-dangle:
+    - error
+    - always-multiline

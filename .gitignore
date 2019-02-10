@@ -10,9 +10,6 @@
 # Node.js
 node_modules/
 
-# Bower
-bower_components/
-
 # Test coverage
 coverage/
 

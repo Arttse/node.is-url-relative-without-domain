@@ -1,13 +1,15 @@
 * text=auto
 
-.jshintrc  text eol=lf
+.gitignore text eol=lf
+.gitattributes text eol=lf
+.editorconfig text eol=lf
 .npmignore text eol=lf
 
 *.html text eol=lf
+*.md text eol=lf
 
-*.js   text eol=lf
+*.js text eol=lf
 *.json text eol=lf
 
-*.yaml     text eol=lf
-*.yml      text eol=lf
-*.yml.dist text eol=lf
+*.yaml text eol=lf
+*.yml text eol=lf

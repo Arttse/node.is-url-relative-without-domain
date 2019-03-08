@@ -19,3 +19,8 @@ test('protocols without colon-slash-slash', t => {
   t.false(m('mailto:help@site.com'))
   t.false(m('tel:1234567890'))
 })
+
+test('custom domains', t => {
+  t.true(m('site.com/in/side', []))
+  t.false(m('site.com/in/side', ['com']))
+})

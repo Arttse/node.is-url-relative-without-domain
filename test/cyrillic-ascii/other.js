@@ -20,3 +20,8 @@ test('protocols without colon-slash-slash', t => {
   t.false(m('mailto:xn--l1adbb7cs@xn--80aswg.xn--p1ai'))
   t.false(m('tel:1234567890'))
 })
+
+test('custom domains', t => {
+  t.true(m('xn--80aswg.xn--p1ai/%D0%B2%D0%BD%D1%83/%D1%82%D1%80%D0%B8', []))
+  t.false(m('xn--80aswg.xn--p1ai/%D0%B2%D0%BD%D1%83/%D1%82%D1%80%D0%B8', ['рф']))
+})

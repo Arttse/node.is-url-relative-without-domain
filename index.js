@@ -1,64 +1,61 @@
 'use strict'
 
-var url = require('url')
-var punycode = require('punycode')
-var domains = require('domains')
+const url = require('url')
+const URL = url.URL
+const domains = require('domains')
 
-/**
- * Checks if an URL is relative without domain
- *
- * @param {String} str - URL for check
- * @returns {Boolean}
- */
-module.exports = function (str) {
+const first = it => it[0]
+const last = it => it[it.length - 1]
+const exists = (what, where) => where.indexOf(what) !== -1
+
+module.exports = str => {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string, not ' + typeof str)
   }
 
-  /** Check empty string */
-  if (str === '') {
+  // Check for empty string
+  if (!str) {
     return true
   }
 
-  var m
-  var domain
-
-  /** URL Object */
-  var urlObj = url.parse(str.trim())
-
-  /** Check protocol and hostname */
-  if (urlObj.protocol || urlObj.hostname) {
+  // Check for protocol relative URL
+  if (str.indexOf`//` === 0) {
     return false
   }
 
-  /** Check pathname */
-  if (!urlObj.pathname) {
-    return Boolean(urlObj.search || urlObj.hash)
+  // Check that it is a URL
+  // if URL return false
+  try {
+    return !new URL(str)
+  } catch (e) {}
+
+  // Well, this is not a URL
+  // so... go on
+
+  // Remove slash at the beginning if exists
+  if (str.indexOf`/` === 0) {
+    str = str.slice(1)
   }
 
-  /** Check // */
-  if (urlObj.pathname.indexOf('//') === 0) {
-    return false
+  // Get the first (left) part divided by '/' (remove pathname)
+  str = first(str.split`/`)
+
+  // Check if dot exists
+  // if not exists return true
+  if (!exists('.', str)) {
+    return true
   }
 
-  /** Remove slash in start */
-  if (urlObj.pathname.indexOf('/') === 0) {
-    urlObj.pathname = urlObj.pathname.slice(1)
-  }
+  // Get the first (left) part divided by ':' (remove port)
+  str = first(str.split`:`)
 
-  /** Get domain from pathname */
-  if ((m = urlObj.pathname.match(/(.*?)\//))) {
-    domain = m[1]
-  } else {
-    domain = urlObj.pathname
-  }
+  // Get probably domain name (tld)
+  str = last(str.split`.`)
 
-  /** Remove port */
-  domain = domain.replace(/:(?:.*)$/, '')
+  // Get the Unicode serialization of the domain
+  str = url.domainToUnicode(str)
 
-  /** Domain to Unicode */
-  domain = punycode.toUnicode(domain)
-
-  /** Check domain */
-  return !(new RegExp('\\.(?:' + domains.join('|') + ')$', 'i').test(domain))
+  // Check whether the domain is in the specified list of domains
+  // return false if exists
+  return !exists(str, domains)
 }

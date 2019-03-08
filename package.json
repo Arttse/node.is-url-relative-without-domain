@@ -33,9 +33,7 @@
     "url": "https://github.com/Arttse/node.is-url-relative-without-domain/issues"
   },
   "homepage": "https://github.com/Arttse/node.is-url-relative-without-domain#readme",
-  "dependencies": {
-    "domains": "^1.1.1"
-  },
+  "dependencies": {},
   "devDependencies": {
     "ava": "^1.2.1",
     "coveralls": "^3.0.2",
@@ -46,5 +44,8 @@
     "eslint-plugin-promise": "^4.0.1",
     "eslint-plugin-standard": "^4.0.0",
     "nyc": "^13.2.0"
+  },
+  "optionalDependencies": {
+    "domains": "^1.1.4"
   }
 }

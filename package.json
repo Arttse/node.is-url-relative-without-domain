@@ -6,7 +6,7 @@
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",
-    "test": "npm run lint && nyc -c ava -c 5",
+    "test": "npm run lint && nyc -c ava --fail-fast -c 5",
     "coveralls": "nyc report --reporter=text-lcov | coveralls"
   },
   "engines": {

@@ -38,4 +38,4 @@ isUrlRelativeWithoutDomain('site.com/show/must?go=on');
 
 ## License
 
-MIT © Nikita «Arttse» Bystrov
+MIT © Nikita Bystrov (Arttse)

@@ -27,7 +27,7 @@
     "domain",
     "name"
   ],
-  "author": "Nikita «Arttse» Bystrov",
+  "author": "Nikita Bystrov (Arttse)",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/Arttse/node.is-url-relative-without-domain/issues"

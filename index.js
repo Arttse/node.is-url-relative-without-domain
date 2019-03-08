@@ -2,13 +2,17 @@
 
 const url = require('url')
 const URL = url.URL
-const domains = require('domains')
+
+let domains = []
+try {
+  domains = require('domains')
+} catch (e) {}
 
 const first = it => it[0]
 const last = it => it[it.length - 1]
 const exists = (what, where) => where.indexOf(what) !== -1
 
-module.exports = str => {
+module.exports = (str, tlds = domains) => {
   if (typeof str !== 'string') {
     throw new TypeError('Expected a string, not ' + typeof str)
   }
@@ -57,5 +61,5 @@ module.exports = str => {
 
   // Check whether the domain is in the specified list of domains
   // return false if exists
-  return !exists(str, domains)
+  return !exists(str, tlds)
 }

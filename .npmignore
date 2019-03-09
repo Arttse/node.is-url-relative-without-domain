@@ -1,2 +1,5 @@
 # All unnecessary
 *
+
+# But not
+!index.d.ts

@@ -1,13 +1,16 @@
 * text=auto
 
-.gitignore text eol=lf
-.gitattributes text eol=lf
 .editorconfig text eol=lf
+.gitattributes text eol=lf
+.gitignore text eol=lf
 .npmignore text eol=lf
 
-*.html text eol=lf
+LICENSE text eol=lf
 *.md text eol=lf
 
+*.html text eol=lf
+
+*.ts text eol=lf
 *.js text eol=lf
 *.json text eol=lf
 

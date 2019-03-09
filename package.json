@@ -1,6 +1,6 @@
 {
   "name": "is-url-relative-without-domain",
-  "version": "2.0.0",
+  "version": "2.0.0-dev-next",
   "description": "Checks if a URL is relative without domain",
   "main": "index.js",
   "types": "index.d.ts",

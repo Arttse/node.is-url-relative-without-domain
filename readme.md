@@ -1,4 +1,5 @@
 # is-url-relative-without-domain
+[![install size](https://packagephobia.now.sh/badge?p=is-url-relative-without-domain)](https://packagephobia.now.sh/result?p=is-url-relative-without-domain)
 [![Coverage Status](https://coveralls.io/repos/github/Arttse/node.is-url-relative-without-domain/badge.svg?branch=master)](https://coveralls.io/github/Arttse/node.is-url-relative-without-domain?branch=master)
 [![Known Vulnerabilities](https://snyk.io/test/github/arttse/node.is-url-relative-without-domain/badge.svg)](https://snyk.io/test/github/arttse/node.is-url-relative-without-domain)
 

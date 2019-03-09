@@ -32,7 +32,7 @@ $ yarn add is-url-relative-without-domain --ignore-optional
 ## Usage
 
 ```js
-var isUrlRelativeWithoutDomain = require('is-url-relative-without-domain');
+const isUrlRelativeWithoutDomain = require('is-url-relative-without-domain');
 
 isUrlRelativeWithoutDomain('/show/must?go=on');
 //=> true

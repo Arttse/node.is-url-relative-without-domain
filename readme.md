@@ -9,7 +9,7 @@ Version 2 requires Node.js >= 6.13.
 
 ## Install
 
-### Package `domains` included
+### Package [domains](https://www.npmjs.com/package/domains) included
 ```sh
 # NPM
 $ npm install is-url-relative-without-domain
@@ -18,7 +18,7 @@ $ npm install is-url-relative-without-domain
 $ yarn add is-url-relative-without-domain
 ```
 
-### Without package `domains`
+### Without package [domains](https://www.npmjs.com/package/domains)
 ```sh
 # NPM
 $ npm install is-url-relative-without-domain --no-optional
@@ -47,7 +47,7 @@ isUrlRelativeWithoutDomain('site.com/show/must?go=on');
 //=> false
 ```
 
-By default package using optional dependency `domains`. But, if you want to using your own list of domains, you can install without optional dependencies and specify code like this:
+By default package using optional dependency [domains](https://www.npmjs.com/package/domains). But, if you want to using your own list of domains, you can install without optional dependencies and specify code like this:
 ```js
 isUrlRelativeWithoutDomain('site.com/foo/bar', ['com', 'рф', '世界']);
 ```

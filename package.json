@@ -4,6 +4,7 @@
   "description": "Checks if a URL is relative without domain",
   "main": "index.js",
   "types": "index.d.ts",
+  "sideEffects": false,
   "scripts": {
     "lint": "eslint .",
     "lint:fix": "npm run lint -- --fix",

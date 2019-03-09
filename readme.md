@@ -55,5 +55,4 @@ In second argument you can add your own array of domains in Unicode.
 
 
 ## License
-
-MIT © Nikita Bystrov (Arttse)
+[MIT](LICENSE) &copy; 2016-2019 Nikita Bystrov (Arttse)
